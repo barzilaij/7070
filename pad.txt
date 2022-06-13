@@ -1,2 +1,2 @@
 
-mvn archetype:generate -DgroupId=fr.soundpage.app -DartifactId=soundpageApp -DarchetypeArtifactId=maven-archetype-quickstart -DarchetypeVersion=1.4 -DinteractiveMode=false
+mvn archetype:generate -DgroupId=projet_01_02 -DartifactId=projet_01_02 -DarchetypeArtifactId=maven-archetype-quickstart -DarchetypeVersion=1.4 -DinteractiveMode=false

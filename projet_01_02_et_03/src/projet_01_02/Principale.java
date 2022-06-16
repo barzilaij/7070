@@ -5,7 +5,6 @@
  */
 package projet_01_02;
 
-import java.util.List;
 import org.hibernate.*;
 
 /**
@@ -18,15 +17,11 @@ public class Principale {
         System.out.println("Etat session "+session.isOpen());
         Transaction tx = null;
         try {
-            //Client monClient = new Client();
-            //monClient.setNom("morerasori");
+            Client monClient = new Client();
+            monClient.setNom("rasori");
             tx = session.beginTransaction();
-            
-            //List results = session.createQuery("from Client").list();
-            //session.save(monClient);
+            session.save(monClient);
             tx.commit();
-            
-            //for (Object o:results)System.out.println(o);
         }
         catch(Exception ex) {
             tx.rollback();

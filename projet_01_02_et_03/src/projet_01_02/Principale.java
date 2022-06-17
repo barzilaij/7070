@@ -16,12 +16,27 @@ public class Principale {
         Session session = HibernateUtil.getSessionFactory().getCurrentSession();
         System.out.println("Etat session "+session.isOpen());
         Transaction tx = null;
+        
+        Client c = null;
+                
         try {
-            Client monClient = new Client();
-            monClient.setNom("rasori");
+            //Client monClient = new Client();
+            //monClient.setNom("sally");
             tx = session.beginTransaction();
-            session.save(monClient);
+            //session.save(monClient);
+            
+            java.util.List l = session.createQuery("from Client").list();
+            
+            
+            
+            
+            
             tx.commit();
+            
+            for (Object o:l)System.out.println(o);
+            
+            c = (Client)l.get(5);
+            
         }
         catch(Exception ex) {
             tx.rollback();
@@ -31,5 +46,6 @@ public class Principale {
             session.close();
         }*/
          System.out.println("Etat session "+session.isOpen());
+         
     }
 }

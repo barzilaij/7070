@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+  <class  name="projet.Adresse" table="ADRESSE">
+      <id name="id" type="int" column="adresseid">
+          <generator class="native"/>
+      </id>
+      <property name="ville" column="VILLE" type="string"/>
+      <property name="codepostal" column="CP" type="string"/>
+      <property name="complementcedex" column="CEDEX" type="string"/>
+      <property name="ligne1" column="LIGNE1" type="string"/>
+      <property name="ligne2" column="LIGNE2" type="string"/>
+      <property name="ligne3" column="LIGNE3" type="string"/>
+      
+  </class>
+</hibernate-mapping>
